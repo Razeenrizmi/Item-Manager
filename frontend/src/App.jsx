@@ -127,6 +127,8 @@ function App() {
                 <div className="item-details">
                   <h3>{item.name}</h3>
                   <p>Price: ${item.price}</p>
+                  <p>Description: ${item.description}</p>
+                    <p>Category: ${item.category}</p>
                   {/* TODO (Student): Display 'description' and 'category' here */}
                 </div>
                 <div className="item-actions">
