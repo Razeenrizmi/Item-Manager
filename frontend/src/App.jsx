@@ -13,7 +13,7 @@ function App() {
 
   const fetchItems = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/api/items');
+      const res = await axios.get('item-manager-production-9f11.up.railway.app/api/items');
       setItems(res.data);
     } catch (err) {
       console.error('Error fetching items:', err);
@@ -34,7 +34,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/api/items', formData);
+      await axios.post('item-manager-production-9f11.up.railway.app/api/items', formData);
       fetchItems(); // Refresh the list
       setFormData({
         name: '',
@@ -52,7 +52,7 @@ function App() {
     // TODO (Student): Implement the delete functionality here
     // Hint: Use axios.delete() and then call fetchItems()
     try {
-      await axios.delete(`http://localhost:8000/api/items/${id}`);
+      await axios.delete(`item-manager-production-9f11.up.railway.app/api/items/${id}`);
       fetchItems(); // Refresh the list after deletion
     } catch (err) {    
       console.error('Error deleting item:', err);
